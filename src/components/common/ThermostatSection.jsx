@@ -1,26 +1,9 @@
-import { CircleMinus } from "lucide-react";
-import { CirclePlus } from "lucide-react";
-import { useState } from "react";
 import ButtonPlus from "./buttons/ButtonPlus";
 import ButtonMinus from "./buttons/ButtonMinus";
 import ButtonReset from "./buttons/ButtonReset";
 
 export default function ThermostatSection() {
 
-    const [temp, setTemp] = useState(20)
-
-
-    function handleTempTurnDown() {
-        setTemp(actual => (actual > 16 ? actual - 1 : actual))
-    }
-
-    function handleTempTurnUp() {
-        setTemp(actual => (actual < 28 ? actual + 1 : actual))
-    }
-
-    function handleStandardTemp() {
-        setTemp(20)
-    }
 
     return (
         <section className="text-center">
