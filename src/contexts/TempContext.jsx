@@ -1,5 +1,5 @@
-export default function TempContext() {
-    return (
-        <div>TempContext</div>
-    )
-}
+import { createContext } from "react";
+
+const TempContext = createContext()
+
+export default TempContext
