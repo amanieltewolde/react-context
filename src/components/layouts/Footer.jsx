@@ -1,5 +1,8 @@
+import { useContext } from "react"
+import TempContext from "../../contexts/TempContext"
 
 export default function Footer() {
+    const { temp } = useContext(TempContext)
     return (
         <footer className="text-bg-success text-center">
             <h2>Footer</h2>

@@ -1,9 +1,12 @@
 import ButtonPlus from "./buttons/ButtonPlus";
 import ButtonMinus from "./buttons/ButtonMinus";
 import ButtonReset from "./buttons/ButtonReset";
+import { useContext } from "react";
+import TempContext from "../../contexts/TempContext";
 
 export default function ThermostatSection() {
 
+    const { temp } = useContext(TempContext)
 
     return (
         <section className="text-center">
@@ -12,7 +15,7 @@ export default function ThermostatSection() {
                 <div className="w-100">
                     <p className="display-2 border px-3">{temp + '\u00B0C'}</p>
                 </div>
-                <div className="btn btn-primary mb-3">
+                <div className="btn-group mb-3">
                     <ButtonPlus />
                     <ButtonMinus />
                     <ButtonReset />
