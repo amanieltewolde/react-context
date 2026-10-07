@@ -1,6 +1,9 @@
 import { CircleMinus } from "lucide-react";
 import { CirclePlus } from "lucide-react";
 import { useState } from "react";
+import ButtonPlus from "./buttons/ButtonPlus";
+import ButtonMinus from "./buttons/ButtonMinus";
+import ButtonReset from "./buttons/ButtonReset";
 
 export default function ThermostatSection() {
 
@@ -27,9 +30,9 @@ export default function ThermostatSection() {
                     <p className="display-2 border px-3">{temp + '\u00B0C'}</p>
                 </div>
                 <div className="btn btn-primary mb-3">
-                    <button onClick={handleTempTurnUp} className="btn text-bg-primary btn-sm"><CirclePlus size={20} /></button>
-                    <button onClick={handleTempTurnDown} className="btn text-bg-primary btn-sm"><CircleMinus size={20} /></button>
-                    <button onClick={handleStandardTemp} className="btn btn-danger rounded rounded-5 btn-sm fw-bold">Reset</button>
+                    <ButtonPlus />
+                    <ButtonMinus />
+                    <ButtonReset />
                 </div>
             </div>
         </section>
