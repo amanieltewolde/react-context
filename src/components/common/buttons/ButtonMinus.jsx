@@ -3,10 +3,10 @@ import { useContext } from "react";
 import TempContext from "../../../contexts/TempContext";
 
 export default function ButtonMinus() {
-    const { handleTempTurnDown } = useContext(TempContext)
+    const { handleTempTurnDown, temp } = useContext(TempContext)
     return (
         <>
-            <button onClick={handleTempTurnDown} className="btn text-bg-primary btn-sm"><CircleMinus size={20} /></button>
+            <button onClick={handleTempTurnDown} className={`btn text-bg-primary ${temp <= 16 ? 'disabled' : ''}`}><CircleMinus size={20} /></button>
         </>
     )
 }

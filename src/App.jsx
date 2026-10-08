@@ -20,8 +20,12 @@ export default function App() {
   function handleStandardTemp() {
     setTemp(20)
   }
+
+
+
+
   return (
-    <div className="d-flex flex-column ">
+    <div className="d-flex flex-column min-vh-100">
       <Header />
       <TempContext value={{
         temp,
