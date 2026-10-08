@@ -21,6 +21,33 @@ export default function App() {
     setTemp(20)
   }
 
+  let actualTemp = {
+  };
+
+  const coldTemp = temp < 21;
+  const hotTemp = temp > 24;
+  const comfortTemp = temp >= 21 && temp <= 24;
+
+  if (coldTemp) {
+    actualTemp =
+    {
+      label: 'freddo',
+      bgColor: 'bg-info',
+    }
+  } else if (hotTemp) {
+    actualTemp =
+    {
+      label: 'caldo',
+      bgColor: 'bg-danger',
+    }
+  } else if (comfortTemp) {
+    actualTemp =
+    {
+      label: 'comfort',
+      bgColor: 'bg-success',
+    }
+
+  }
 
 
 
@@ -32,6 +59,7 @@ export default function App() {
         handleTempTurnUp,
         handleTempTurnDown,
         handleStandardTemp,
+        actualTemp,
       }}>
         <Sidebar />
         <MainContent />
