@@ -1,13 +1,12 @@
 import ButtonPlus from "./buttons/ButtonPlus";
 import ButtonMinus from "./buttons/ButtonMinus";
 import ButtonReset from "./buttons/ButtonReset";
-import { useContext } from "react";
-import TempContext from "../../contexts/TempContext";
 import TempBadge from "./TempBadge";
+import { useTempContext } from "../../contexts/TempContext";
 
 export default function ThermostatSection() {
 
-    const { temp } = useContext(TempContext)
+    const { temp } = useTempContext()
 
     return (
         <section className="text-center">

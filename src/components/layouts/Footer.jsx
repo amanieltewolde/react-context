@@ -1,9 +1,8 @@
-import { useContext } from "react"
-import TempContext from "../../contexts/TempContext"
+import { useTempContext } from "../../contexts/TempContext"
 import TempBadge from "../common/TempBadge"
 
 export default function Footer() {
-    const { temp } = useContext(TempContext)
+    const { temp } = useTempContext()
     return (
         <footer className="text-bg-success text-center">
             <div className="container  position-relative">
